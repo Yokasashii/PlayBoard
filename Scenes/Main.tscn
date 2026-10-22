@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ceu771rqxpk0b"]
+
+[ext_resource type="Script" uid="uid://cq3ttcbtbv2sk" path="res://Scripts/Main.cs" id="1_idj7w"]
+[ext_resource type="AudioStream" uid="uid://dy4mk8ctym6vi" path="res://Assets/Music/BackgroundSound.mp3" id="2_idj7w"]
+
+[node name="Main" type="Node2D" unique_id=1958644901]
+script = ExtResource("1_idj7w")
+
+[node name="ButtonPong" type="Button" parent="." unique_id=743330782]
+offset_left = 70.000015
+offset_top = 102.0
+offset_right = 125.000015
+offset_bottom = 133.0
+scale = Vector2(1.7662746, 1.771797)
+text = "PONG
+"
+
+[node name="ButtonSnake" type="Button" parent="." unique_id=1912494505]
+offset_left = 72.000015
+offset_top = 170.0
+offset_right = 132.00002
+offset_bottom = 201.0
+scale = Vector2(1.7662746, 1.771797)
+text = "SNAKE
+"
+
+[node name="ButtonBreakout" type="Button" parent="." unique_id=1960938600]
+offset_left = 75.000015
+offset_top = 237.0
+offset_right = 155.00002
+offset_bottom = 268.0
+scale = Vector2(1.7662746, 1.771797)
+text = "BREAKOUT
+
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1785618000]
+stream = ExtResource("2_idj7w")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true

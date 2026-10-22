@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://hunml521ek47"]
+
+[ext_resource type="Script" uid="uid://d0bjmaqk38oky" path="res://Scripts/Before/Breakout/Breakout.cs" id="1_ye3hc"]
+[ext_resource type="Texture2D" uid="uid://djein6d6ddcpv" path="res://Assets/Visual/Pong/Background.png" id="2_nd8ak"]
+[ext_resource type="PackedScene" uid="uid://bkgsgplmdrdk4" path="res://Scenes/Games/Pong/PongBall.tscn" id="3_710m8"]
+[ext_resource type="PackedScene" uid="uid://dvowx1o6tbauo" path="res://Scenes/Games/Pong/Player.tscn" id="4_remb2"]
+
+[node name="Breakout" type="Node2D" unique_id=161122832 node_paths=PackedStringArray("player", "ball")]
+script = ExtResource("1_ye3hc")
+player = NodePath("Player")
+ball = NodePath("Ball")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=712809208]
+position = Vector2(549, 334)
+texture = ExtResource("2_nd8ak")
+
+[node name="Player" parent="." unique_id=1573413692 instance=ExtResource("4_remb2")]
+scale = Vector2(0.88, 1.04)
+
+[node name="Ball" parent="." unique_id=2089158113 instance=ExtResource("3_710m8")]
+scale = Vector2(0.585, 0.585)
