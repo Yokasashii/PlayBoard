@@ -7,8 +7,10 @@ namespace Com.Vincent_Guerrini.PlayBoard.GameObject;
 
 public partial class Player : GameObject
 {
+    [Export] public Sprite2D runderer;
     public Key KeyUp = Key.Up;
     public Key KeyDown = Key.Down;
+
 
     public override void _Ready()
 	{

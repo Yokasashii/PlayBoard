@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cq3ttcbtbv2sk" path="res://Scripts/Before/Pong/Pong.cs" id="1_ip4bg"]
 [ext_resource type="PackedScene" uid="uid://dvowx1o6tbauo" path="res://Scenes/Games/Pong/Player.tscn" id="2_cghwj"]
 [ext_resource type="PackedScene" uid="uid://bkgsgplmdrdk4" path="res://Scenes/Games/Pong/PongBall.tscn" id="3_uhars"]
+[ext_resource type="Texture2D" uid="uid://c0b3q4db0uf8y" path="res://Assets/Visual/Pong/Blue.png" id="4_ipjca"]
 [ext_resource type="Texture2D" uid="uid://djein6d6ddcpv" path="res://Assets/Visual/Pong/Background.png" id="5_sfkpr"]
 
 [node name="Pong" type="Node2D" unique_id=1958644901 node_paths=PackedStringArray("score", "gameTimer")]
@@ -11,6 +12,7 @@ scenePlayer = ExtResource("2_cghwj")
 sceneBall = ExtResource("3_uhars")
 score = NodePath("Label")
 gameTimer = NodePath("Timer")
+skinPlayer = ExtResource("4_ipjca")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=775728682]
 modulate = Color(0.89739984, 0.8973998, 0.8973997, 1)

@@ -10,4 +10,7 @@
     <EmbeddedResource Remove="script_templates\**" />
     <None Remove="script_templates\**" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
 </Project>

@@ -6,8 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5fpy"]
 size = Vector2(38, 185)
 
-[node name="Player" type="Area2D" unique_id=1573413692]
+[node name="Player" type="Area2D" unique_id=1573413692 node_paths=PackedStringArray("runderer")]
 script = ExtResource("1_3e7yg")
+runderer = NodePath("Runderer")
 
 [node name="Runderer" type="Sprite2D" parent="." unique_id=1899683651]
 scale = Vector2(0.5441176, 1)

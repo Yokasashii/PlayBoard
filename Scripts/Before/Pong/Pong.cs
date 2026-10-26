@@ -12,6 +12,7 @@ public partial class Pong : Games
     [Export] private PackedScene sceneBall;
     [Export] private Label score;
     [Export] private Timer gameTimer;
+    [Export] private Texture2D skinPlayer;
 
     private Array<Com.Vincent_Guerrini.PlayBoard.GameObject.GameObject> elements = [];
     private Player player2 = new Player();
@@ -26,7 +27,7 @@ public partial class Pong : Games
             player = (Player)scenePlayer.Instantiate(), 
             player2 = (Player)scenePlayer.Instantiate(), 
             ball = (PongBall)sceneBall.Instantiate()];
-        player2.SelfModulate = Colors.Black;
+        player.runderer.Texture = skinPlayer;
         int lCount = elements.Count;
         for (int i = 0; i <= lCount - 1; i++) { AddChild(elements[i]); }
         gameTimer.Timeout += SpeedUpBall;
