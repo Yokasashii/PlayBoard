@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://ceu771rqxpk0b"]
 
-[ext_resource type="Script" uid="uid://cq3ttcbtbv2sk" path="res://Scripts/Main.cs" id="1_idj7w"]
+[ext_resource type="Script" uid="uid://0nm10lpwq2n6" path="res://Scripts/PlayBoard/Main.cs" id="1_idj7w"]
 [ext_resource type="AudioStream" uid="uid://dy4mk8ctym6vi" path="res://Assets/Music/BackgroundSound.mp3" id="2_idj7w"]
 
-[node name="Main" type="Node2D" unique_id=1958644901]
+[node name="Main" type="Node2D" unique_id=1958644901 node_paths=PackedStringArray("pongButton", "snakeButton", "breakoutButton")]
 script = ExtResource("1_idj7w")
+pongButton = NodePath("ButtonPong")
+snakeButton = NodePath("ButtonSnake")
+breakoutButton = NodePath("ButtonBreakout")
 
 [node name="ButtonPong" type="Button" parent="." unique_id=743330782]
 offset_left = 70.000015

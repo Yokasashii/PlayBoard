@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="PlayBoard"
+config/tags=PackedStringArray("yoka\'s_games")
 run/main_scene="uid://ceu771rqxpk0b"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="uid://bdrm8eyshb2jg"
-config/tags=PackedStringArray("yoka\'s_games")
 
 [display]
 
