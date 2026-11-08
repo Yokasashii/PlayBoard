@@ -2,43 +2,175 @@
 
 [ext_resource type="Script" uid="uid://0nm10lpwq2n6" path="res://Scripts/PlayBoard/Main.cs" id="1_idj7w"]
 [ext_resource type="AudioStream" uid="uid://dy4mk8ctym6vi" path="res://Assets/Music/BackgroundSound.mp3" id="2_idj7w"]
+[ext_resource type="Texture2D" uid="uid://beioh5lmghx62" path="res://Assets/Visual/Menu/Texturelabs_Paper_361S.jpg" id="2_rgh2o"]
+[ext_resource type="AudioStream" uid="uid://tho3kr1w7o6w" path="res://Assets/Sound/Slide_Whistle_Down.mp3" id="4_50glp"]
+[ext_resource type="Texture2D" uid="uid://fa0ow8pixhj6" path="res://Assets/Visual/Player/HeadFront.png" id="5_50glp"]
+[ext_resource type="Texture2D" uid="uid://c7exiipxd65k7" path="res://Assets/Visual/Player/BodyFront.png" id="6_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://ejlexdf65igg" path="res://Assets/Visual/Player/LeftHand.png" id="7_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://jes1j57sx4o" path="res://Assets/Visual/Menu/Logo.png" id="7_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://c14iw2sd1brpe" path="res://Assets/Visual/Player/RighttHand.png" id="8_4kpch"]
 
-[node name="Main" type="Node2D" unique_id=1958644901 node_paths=PackedStringArray("pongButton", "snakeButton", "breakoutButton")]
+[sub_resource type="Animation" id="Animation_50glp"]
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/RightHand:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Logo:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-728.00006, 192)]
+}
+
+[sub_resource type="Animation" id="Animation_grg3l"]
+resource_name = "Welcome"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.7, 1.3),
+"transitions": PackedFloat32Array(1, 1.8025023, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(3.6961489, -340.45175), Vector2(-0.8213053, -275.97537)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.06666667, 0.7, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2.464116, -337.9877), Vector2(0.41072798, -266.94043)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/LeftHand:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.16666667, 0.8666667, 1.5333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-13.962989, -3.8146973e-06), Vector2(-12.730957, -433.26492), Vector2(-12.730957, -252.97739)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/RightHand:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.13333334, 0.93333334, 1.5666667, 2.0333333, 2.1333334, 2.2666667, 2.3666666, 2.4333334, 2.5333333, 2.6333334, 2.7333333, 2.8000002, 2.9, 3.19),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(21.355288, -432.03287), Vector2(30.390196, -251.74538), Vector2(57.084244, -385.2156), Vector2(3.6961517, -436.55032), Vector2(57.084244, -385.2156), Vector2(3.6961517, -436.55032), Vector2(57.084244, -385.2156), Vector2(3.6961517, -436.55032), Vector2(57.084244, -385.2156), Vector2(3.6961517, -436.55032), Vector2(57.084244, -385.2156), Vector2(3.6961517, -436.55032), Vector2(30.390196, -251.74538)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Logo:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.2333333, 3.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-728.00006, 192), Vector2(942, 134)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frkhe"]
+_data = {
+&"RESET": SubResource("Animation_50glp"),
+&"Welcome": SubResource("Animation_grg3l")
+}
+
+[node name="Main" type="Node2D" unique_id=1958644901]
 script = ExtResource("1_idj7w")
-pongButton = NodePath("ButtonPong")
-snakeButton = NodePath("ButtonSnake")
-breakoutButton = NodePath("ButtonBreakout")
 
-[node name="ButtonPong" type="Button" parent="." unique_id=743330782]
-offset_left = 70.000015
-offset_top = 102.0
-offset_right = 125.000015
-offset_bottom = 133.0
-scale = Vector2(1.7662746, 1.771797)
-text = "PONG
-"
+[node name="Background" type="Sprite2D" parent="." unique_id=2120265976]
+position = Vector2(977.99994, 529.99994)
+scale = Vector2(1.239186, 1.2491647)
+texture = ExtResource("2_rgh2o")
 
-[node name="ButtonSnake" type="Button" parent="." unique_id=1912494505]
-offset_left = 72.000015
-offset_top = 170.0
-offset_right = 132.00002
-offset_bottom = 201.0
-scale = Vector2(1.7662746, 1.771797)
-text = "SNAKE
-"
+[node name="Player" type="Node2D" parent="." unique_id=576692126]
+position = Vector2(1089, 1286.0001)
+rotation = 3.1415927
+scale = Vector2(2.435, -2.435)
 
-[node name="ButtonBreakout" type="Button" parent="." unique_id=1960938600]
-offset_left = 75.000015
-offset_top = 237.0
-offset_right = 155.00002
-offset_bottom = 268.0
-scale = Vector2(1.7662746, 1.771797)
-text = "BREAKOUT
+[node name="Head" type="Sprite2D" parent="Player" unique_id=1902314741]
+texture = ExtResource("5_50glp")
 
-"
+[node name="Body" type="Sprite2D" parent="Player" unique_id=1802882757]
+texture = ExtResource("6_vy5pj")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1785618000]
+[node name="LeftHand" type="Sprite2D" parent="Player" unique_id=1070472430]
+position = Vector2(-12.730957, -252.97739)
+texture = ExtResource("7_bmxlf")
+
+[node name="RightHand" type="Sprite2D" parent="Player" unique_id=896158601]
+texture = ExtResource("8_4kpch")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1943500635]
+position = Vector2(-728.00006, 192)
+scale = Vector2(0.4245543, 0.4375346)
+texture = ExtResource("7_vy5pj")
+
+[node name="BackgroundSound" type="AudioStreamPlayer" parent="." unique_id=1785618000]
 stream = ExtResource("2_idj7w")
-volume_db = -20.0
+volume_db = -15.14
 autoplay = true
 parameters/looping = true
+
+[node name="EnterButtonSound" type="AudioStreamPlayer" parent="." unique_id=608254421]
+stream = ExtResource("4_50glp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=242316988]
+libraries/ = SubResource("AnimationLibrary_frkhe")
+autoplay = &"Welcome"

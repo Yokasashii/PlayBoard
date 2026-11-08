@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://vmqvg3w262r3"]
+
+[ext_resource type="Texture2D" uid="uid://ejlexdf65igg" path="res://Assets/Visual/Player/LeftHand.png" id="1_nn08x"]
+[ext_resource type="Texture2D" uid="uid://c14iw2sd1brpe" path="res://Assets/Visual/Player/RighttHand.png" id="2_52ee3"]
+[ext_resource type="Texture2D" uid="uid://bbs317uc52a1p" path="res://Assets/Visual/Player/BodyBack.png" id="3_bhhdu"]
+[ext_resource type="Texture2D" uid="uid://c7exiipxd65k7" path="res://Assets/Visual/Player/BodyFront.png" id="4_megsn"]
+[ext_resource type="Texture2D" uid="uid://fa0ow8pixhj6" path="res://Assets/Visual/Player/HeadFront.png" id="5_yoq75"]
+[ext_resource type="Texture2D" uid="uid://6yhr5bqelwwx" path="res://Assets/Visual/Player/HeadBack.png" id="6_ksbbd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1ugc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bhhdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_megsn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qpk4a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yoq75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ksbbd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gk2aw"]
+size = Vector2(20, 26.05923)
+
+[node name="Player" type="Area2D" unique_id=1045552887]
+
+[node name="Runderer" type="Node2D" parent="." unique_id=1664935266]
+position = Vector2(163, -7)
+
+[node name="LeftHand" type="Sprite2D" parent="Runderer" unique_id=1240918769]
+texture = ExtResource("1_nn08x")
+
+[node name="RightHand" type="Sprite2D" parent="Runderer" unique_id=632994547]
+texture = ExtResource("2_52ee3")
+
+[node name="Body" type="AnimatedSprite2D" parent="Runderer" unique_id=237304523]
+sprite_frames = SubResource("SpriteFrames_t1ugc")
+
+[node name="Head" type="AnimatedSprite2D" parent="Runderer" unique_id=309988888]
+sprite_frames = SubResource("SpriteFrames_qpk4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1310208956]
+position = Vector2(0, -20.440533)
+scale = Vector2(3.5277915, 7.410769)
+shape = SubResource("RectangleShape2D_gk2aw")
